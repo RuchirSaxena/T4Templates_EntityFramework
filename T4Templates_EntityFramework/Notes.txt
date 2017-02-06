@@ -1,0 +1,91 @@
+﻿Introduction to .tt files & T4 Templates
+
+What are .tt files?
+.tt stands for T4Templates , if we want to write a 
+class and in that class we have some properties like
+P1,P2,P3,P4,.... , so the above class can also be created
+by by writing a programming logic .tt files are nothing
+but code generators , they generate the code automatically
+by taking some programing language as input. The code is 
+written inside text template file
+
+Eg: Below is the example code 
+public class MyClass
+
+{
+
+<# for(int i=1;i<=10;i++)
+
+{#>
+
+public int P<#= i#> { get; set; }
+
+<# }#>
+
+}
+
+The above code created .cs file with below code
+
+public class MyClass
+
+{
+
+
+public int P1 { get; set; }
+
+
+public int P2 { get; set; }
+
+
+public int P3 { get; set; }
+
+
+public int P4 { get; set; }
+
+
+public int P5 { get; set; }
+
+
+public int P6 { get; set; }
+
+
+public int P7 { get; set; }
+
+
+public int P8 { get; set; }
+
+
+public int P9 { get; set; }
+
+
+public int P10 { get; set; }
+
+
+}
+
+The concept of .tt files are used in Entity Framework
+// input(.txt) => .tt => .cs
+
+// input(.edmx) => .tt => .cs
+
+.tt files can also read data from .txt files
+
+the .tt files are reading information from text and converting them
+into code files ie..cs file
+
+This concept is used in entity framework 5,6 is using to generate Model classes
+from these .tt files
+
+ie. as input they are reading .edmx file(XML File) readed by .tt files
+and then they are generating .cs files 
+
+// input(.edmx) => .tt => .cs
+
+
+
+
+
+
+
+
+
